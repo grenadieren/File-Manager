@@ -43,6 +43,9 @@ class FileManager(cmd.Cmd):
         print("copyfile > copy a file/directory")
         print("rmdir > remove a directory/file")
         print("rmtr > remove a directory tree")
-    
+
+    def do_ls(self, line):
+        print(os.listdir(os.getcwd)())
+
 if __name__ == '__main__':
     FileManager().cmdloop()
